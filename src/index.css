@@ -13,7 +13,7 @@ body {
 h1 {
   margin: 0px 50px;
 }
-p {
+#myName {
   margin: 0px 160px;
 }
 a {
@@ -22,13 +22,39 @@ a {
 
 .searchBar {
   width: 400px;
-  margin: 100px auto;
+  margin: 60px auto;
 }
 .inputField {
-  width: 300px;
+  width: 340px;
   height: 30px;
   margin: 0px 10px;
 }
 .searchBtn {
   height: 30px;
 }
+
+.tabularData {
+    min-height: 300px;
+    max-width: 600px;
+    margin: auto;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: auto auto 200px;
+    grid-template-rows: 200px 200px;
+    grid-template-areas:
+      "image image card"
+      "card1 card2 card3";
+}
+.image {
+  width: 400px;
+  height: 200px;
+  grid-area: image;
+}
+.weatherData1 {
+  font-size: 40px;
+  background:LightSalmon; 
+  grid-area: card; 
+}
+.weatherData2{background:PaleTurquoise;}
+.weatherData3{background:LightPink;}
+.weatherData4{background:red;}

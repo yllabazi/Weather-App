@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="header">
       <Logo />
-      <a href="https://github.com/yllabazi" target="_blank"><p>coded by yllabazi <FontAwesomeIcon icon={faGithub}/></p></a>
+      <a href="https://github.com/yllabazi" target="_blank"><p id='myName'>coded by yllabazi <FontAwesomeIcon icon={faGithub}/></p></a>
     </div>
   )
 }

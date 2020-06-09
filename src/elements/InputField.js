@@ -1,9 +1,9 @@
 import React from 'react';
 
-const InputField = () => {
-  return (
-      <input className='inputField' placeholder='Enter location...' />
-  )
+export default class InputField extends React.Component {
+  render() {
+    return (
+        <input onChange={this.props.handleInputChange} className='inputField' placeholder='Enter location...' />
+    )
+  }
 }
-
-export default InputField;

@@ -1,12 +1,12 @@
 import React from 'react';
+import Image from '../elements/Image';
+import Card from '../elements/Card';
 
 const TabularData = () => {
   return (
     <div className='tabularData'>
-      <div className='image'>
-        <img id='weatherImg' src="#" alt="Current Weather" />
-      </div>
-      <div className='weatherData1'>2</div>
+      <Image />
+      <Card className='weatherData1' />
       <div className='weatherData2'>3</div>
       <div className='weatherData3'>4</div>
       <div className='weatherData4'>5</div>
