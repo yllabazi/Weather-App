@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Image = () => {
+const Image = (props) => {
+  const data = props.weatherDetails;
   return (
-    <img className='image' src='https://images.unsplash.com/photo-1529923123842-3310dfdc0b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80' alt=''/>
+    <img className='image' src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`} alt=''/>
   )
 }
 

@@ -3,7 +3,6 @@ import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
 import TabularData from '../components/Table'
 import WeatherData from '../components/WeatherData';
-import WeatherCard from "../elements/Card";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -11,9 +10,11 @@ export default class App extends React.Component {
     this.state = {
       inputField: '',
       weatherDetails: {
+        description: '',
         temp: 0,
-        precip: '0%',
-        wind: '0 KM/H',
+        humidity: 0,
+        wind: 0,
+        icon: ''
       }
     }
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -26,7 +27,16 @@ export default class App extends React.Component {
 
   async handleBtnClick() {
     const weather = await WeatherData(this.state.inputField);
-    console.log(weather.current.weather[0].main);
+    this.setState(
+      {weatherDetails: {
+        description: weather.current.weather[0].main,
+        temp: weather.current.temp,
+        wind: weather.current.wind_speed,
+        humidity: weather.current.humidity,
+        icon: weather.current.weather[0].icon
+        }
+      })
+    console.log(weather.current.weather[0].main, weather.current.temp );
   }
 
   render() {
@@ -37,7 +47,7 @@ export default class App extends React.Component {
           handleInputChange={this.handleInputChange}
           handleBtnClick={this.handleBtnClick}
         />
-        <TabularData />
+        <TabularData weatherDetails={this.state.weatherDetails} />
       </div>
     )
   }

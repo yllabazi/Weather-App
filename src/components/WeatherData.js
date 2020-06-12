@@ -1,7 +1,7 @@
 export default async function getWeather(city) {
   let lat, lng;
   const responseLoc = await fetch(
-    `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyBeLVxqaM3bGbmWY47z9q2pRWylWD5SzlU`,
+    `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyDEeWtjk96Y_jbeB_u6qX0P9KvLxERp5OQ`,
     { mode: "cors" }
   );
   let locationData = await responseLoc.json();

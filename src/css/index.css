@@ -51,9 +51,9 @@ a {
   grid-area: image;
 }
 .weatherData1 {
-  font-size: 40px;
-  background:LightSalmon; 
+  font-size: 25px;
   grid-area: card; 
+  margin: 0;
 }
 .weatherData2{background:PaleTurquoise;}
 .weatherData3{background:LightPink;}
