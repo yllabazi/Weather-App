@@ -1,11 +1,10 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faHeart, faCoffee} from '@fortawesome/free-solid-svg-icons';
+import Emoji from 'react-emoji-render';
 
 
 const Footer = () => {
   return (
-    <p>Coded by Ylli with <FontAwesomeIcon icon={faCoffee}/> and <FontAwesomeIcon icon={faHeart}/> using ReactJS and OpenWeatherMap API</p>
+    <p className='footer'>Coded by Ylli with <Emoji text="<3" /> and <Emoji text=":coffee:" /> using ReactJS, OpenWeatherMap, Geocode, and Giphy APIs </p>
   )
 }
 

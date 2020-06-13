@@ -1,12 +1,9 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faThermometerHalf, faWind, faTint, faCloudSun, faCloudRain} from '@fortawesome/free-solid-svg-icons';
-
 
 class WeatherCard extends React.Component {
   render() {
     let today = new Date();
-    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let days = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."];
     let dd = String(today.getDate()).padStart(2, '0');
     let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     let day = days[today.getDay()]

@@ -34,27 +34,45 @@ a {
 }
 
 .tabularData {
-    min-height: 300px;
-    max-width: 600px;
+    min-height: 400px;
+    max-width: 200px;
     margin: auto;
     background: LightGray;
     display: grid;
-    grid-template-columns: auto auto 200px;
+    grid-template-columns: 200px;
     grid-template-rows: 200px 200px;
     grid-template-areas:
-      "image image card"
-      "card1 card2 card3";
+      "image"
+      "card";
+    border: thick solid rgba(7, 137, 213, 0.6);
+    box-shadow: 5px 5px rgba(7, 137, 213, 0.4),
+    10px 10px rgba(7, 137, 213, 0.3),
+    15px 15px rgba(7, 137, 213, 0.2),
+    20px 20px rgba(7, 137, 213, 0.1),
+    25px 25px rgba(7, 137, 213, 0.05);
 }
 .image {
-  width: 400px;
+  width: 200px;
   height: 200px;
   grid-area: image;
 }
 .weatherData1 {
+  background-color: rgb(129, 238, 229);
   font-size: 25px;
   grid-area: card; 
   margin: 0;
+  padding-left: 10px;
+  height: 40px;
 }
-.weatherData2{background:PaleTurquoise;}
-.weatherData3{background:LightPink;}
-.weatherData4{background:red;}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #3489f3;
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-family: monospace;
+  font-size: 18px;
+}
